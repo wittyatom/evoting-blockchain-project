@@ -68,20 +68,20 @@ span.psw {
 </head>
 <body>
 
-<center><h2>E-voting Login</h2></center>
-
+<center><h2>Welcome to E-voting Portal Login Below to Participate</h2></center>
+<center><h3>Login Below to Participate:</h3></center>
 <form name="myform" action="/action_page.php" onsubmit="checkval()">
   <div class="imgcontainer">
     <img src="img_avatar2.png" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">
-    <label for="uname"><b>Aadhar card number</b></label>
+    <label for="uname"><b>Enter Aadhar Card Number:</b></label>
     <input type="text" placeholder="Enter Aadhar number" name="uname" required>
 
 <!--    <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
-    -->    
+    -->
     <button type="submit">Login</button>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
@@ -103,8 +103,7 @@ span.psw {
  console.log(x);
   var pattern=/[0-9]{12}/g;
   if(pattern.test(x)==false)
-    alert("can contain 12 digits only")
+    alert("Invalid Aadhar Number.. Try Again")
 }
 </script>
 </html>
-
