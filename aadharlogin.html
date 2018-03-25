@@ -7,12 +7,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 3px solid #f1f1f1;}
 
 input[type=text], input[type=password] {
-    width: 100%;
+    width: 40%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    al
 }
 
 button {
@@ -22,7 +23,7 @@ button {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 40%;
 }
 
 button:hover {
@@ -41,12 +42,12 @@ button:hover {
 }
 
 img.avatar {
-    width: 40%;
-    border-radius: 50%;
+    width: 20%;
+    border-radius: 40%;
 }
 
 .container {
-    padding: 16px;
+    padding: 10px;
 }
 
 span.psw {
@@ -75,23 +76,20 @@ span.psw {
     <img src="img_avatar2.png" alt="Avatar" class="avatar">
   </div>
 
-  <div class="container">
-    <label for="uname"><b>Enter Aadhar Card Number:</b></label>
-    <input type="text" placeholder="Enter Aadhar number" name="uname" required>
+  <center><div class="container">
+    <label for="uname"><b>Enter Aadhar Card Number:</b></label><br>
+    <input type="text" placeholder="Enter Aadhar number" name="uname" required><br>
 
 <!--    <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
     -->
-    <button type="submit">Login</button>
+    <button type="submit">Login</button><br>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
-  </div>
+  </div><center>
 
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
+
 </form>
 
 </body>
