@@ -69,24 +69,22 @@ span.psw {
 </head>
 <body>
 
-<center><h2>Welcome to E-voting Portal</h2></center>
-<center><h3>Login Below to Participate:</h3></center>
-<form name="myform" action="" method="post" onsubmit="checkval()" >
+<center><h2>OTP AUTHENTICATION:</h2></center>
+
+<form name="myform" method="post" >
   <div class="imgcontainer">
-    <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    <img src="otp.png" alt="Avatar" class="avatar">
   </div>
 
   <center><div class="container">
-    <label for="uname"><b>Enter Aadhar Card Number:</b></label><br>
-    <input type="text" id="uname" placeholder="Enter Aadhar number" name="uname" required><br>
+    <label for="uname"><b>Enter the OTP sent to registered mobile number:</b></label><br>
+    <input type="text" id="otp" placeholder="Enter OTP" name="otp" required><br>
 
 <!--    <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
     -->
-    <button type="submit" >Login</button><br>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
+    <button type="submit" onclick="checkval()">Authenticate</button><br>
+    
   </div><center>
 
 
@@ -120,8 +118,7 @@ function request(val){
          if (this.readyState == 4 && this.status == 200) {
                     
                     console.log("Chal Gaya");
-                    document.write(this.responseText);
-                    
+                    document.write("working");
                 }
             }
           xmlhttp.open("POST","http://localhost/test/win.php",true);
