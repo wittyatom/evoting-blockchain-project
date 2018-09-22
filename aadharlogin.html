@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 3px solid #f1f1f1;}
@@ -71,7 +72,7 @@ span.psw {
 
 <center><h2>Welcome to E-voting Portal</h2></center>
 <center><h3>Login Below to Participate:</h3></center>
-<form name="myform" action="" method="post" onsubmit="checkval()" >
+<form name="myform"  action="otppage.php" method="post"onsubmit="return checkval();" >
   <div class="imgcontainer">
     <img src="img_avatar2.png" alt="Avatar" class="avatar">
   </div>
@@ -84,51 +85,33 @@ span.psw {
     <input type="password" placeholder="Enter Password" name="psw" required>
     -->
     <button type="submit" >Login</button><br>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
+
   </div><center>
 
 
 </form>
-
-</body>
 <script type="text/javascript">
   function checkval()
   {
-    //document.write("hi");
+
  var x=document.forms["myform"]["uname"].value;
- 
+
   var pattern=/[0-9]{12}/g;
   if(pattern.test(x)==false){
-    alert("Invalid Aadhar Number.. Try Again")
+    
+    alert("Invalid Aadhar Number.. Try Again");
+    return false;
   }
   else{
-    console.log("hello1");
-    var aadhar = x;
-    request(aadhar);
-
-
+    return true;
   }
 
 
-}
-function request(val){
-    var sen = "aadhar="+ val;
-     var xmlhttp = new XMLHttpRequest();
-     xmlhttp.onreadystatechange = function() {
-         if (this.readyState == 4 && this.status == 200) {
-                    
-                    console.log("Chal Gaya");
-                    document.write(this.responseText);
-                    
-                }
-            }
-          xmlhttp.open("POST","http://localhost/test/win.php",true);
-          xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-          xmlhttp.send(sen);
-          
+
 
 }
+
 </script>
+</body>
+
 </html>
