@@ -1,6 +1,0 @@
-{
-    "require": {
-        "twilio/sdk": "5.*",
-        "mongodb/mongodb": "^1.3"
-    }
-}
